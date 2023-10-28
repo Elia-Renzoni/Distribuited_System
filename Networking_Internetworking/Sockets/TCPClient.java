@@ -9,13 +9,13 @@ import java.io.*;
 
 public class TCPClient {
     public static void main(String[] args) throws IOException {
-        Socket server = new Socket("localhost", 1280);
-        InputStream sStream = server.getInputStream();
+        Socket client = new Socket("localhost", 1280);
+        InputStream sStream = client.getInputStream();
         DataInputStream socketComm = new DataInputStream(sStream);
         String serverMessagge = new String(socketComm.readUTF());
         System.out.println(serverMessagge);
         socketComm.close();
         sStream.close();
-        server.close(); 
+        client.close(); 
     }    
 }
