@@ -6,7 +6,7 @@ import java.rmi.RemoteException;
 
 public class Client {
 	public static void main(String[] args) {
-		final String NAME = "rmi://localhost:2300//MathematicalCalculate";
+		final String NAME = "rmi://localhost:1099/MathematicalCalculate";
 		try {
 			MathematicalCalculate pointerCalculate = (MathematicalCalculate) Naming.lookup(NAME);
 			System.out.println("Addizione : " + pointerCalculate.add(12, 45));
